@@ -69,7 +69,7 @@ maxLineDev maxlinedev_opt(vector<Point>::const_iterator begin,vector<Point>::con
 	maxLineDev lineResult;
 	lineResult.del_tol_max = del_tol_max;
 	lineResult.D_temp = S_max;
-	lineResult.index = maxPos-dev.begin();
+	lineResult.index = distance(dev.begin(), maxPos);  // 使用 std::distance 计算索引
 	lineResult.max_dev = *maxPos;
 	return lineResult;
 }

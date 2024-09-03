@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
 
+# compile_commands.json
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 if(DEFINED ENV{VCPKG_DIR})
     set(CMAKE_TOOLCHAIN_FILE $ENV{VCPKG_DIR}/scripts/buildsystems/vcpkg.cmake
   CACHE STRING "Vcpkg toolchain file")
